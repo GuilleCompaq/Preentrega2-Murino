@@ -1,0 +1,141 @@
+/* Css Entrega 1 */
+*/ {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*dentro de body)*/
+#body {
+  font-family: "Nunito", sans-serif;
+  background-color: gray;
+}
+
+#header {
+  display: flex;
+  border: 1px solid black;
+  background-color: gray;
+}
+
+.navbar {
+  width: 100%;
+  border-color: black;
+}
+
+.navbar a {
+  color: white;
+}
+
+.navbar__ul {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: gray;
+  border: 1px solid red;
+  text-align: justify;
+  font-size: 18px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.main__article {
+  border: 3px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1 {
+  color: red;
+  background-color: gray;
+  text-align: center;
+  font-size: 32px;
+  /* border: 3px solid blue; */
+  padding: 0;
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+}
+
+.button__testdrive {
+  background-color: red;
+  border-radius: 8px;
+  padding: 0.5rem 2rem;
+  color: white;
+  font-size: 18px;
+}
+
+#footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  justify-content: end;
+  align-items: center;
+
+  border: 2px solid black;
+}
+
+.fotter-map {
+  width: auto;
+  height: auto;
+}
+
+.fotter__section--h3 {
+  text-align: center;
+}
+
+.fotter-map {
+  justify-content: end;
+}
+
+/*mobile //////////////////////////////////////*/
+@media screen and (max-width: 576px) {
+  #body {
+    min-width: 344px;
+  }
+
+  .navbar__ul {
+    font-size: 14px;
+    background-color: rgb(255, 0, 0);
+  }
+
+  #footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3 1fr);
+    justify-items: center;
+    row-gap: 5px;
+    min-height: 10vh;
+  }
+}
+
+/* tablet ////////////////////////////////////*/
+@media screen and (min-width: 577px) {
+  .navbar__ul {
+    font-size: 18px;
+    background-color: rgb(255, 0, 0);
+  }
+
+  #footer {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    justify-items: center;
+    row-gap: 2px;
+    min-height: 10vh;
+  }
+}
+
+/* laptop */
+@media screen and (min-width: 992px) {
+  .navbar__ul {
+    font-size: 22px;
+    background-color: rgb(255, 0, 0);
+  }
+
+  #footer {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
+    justify-items: center;
+    row-gap: 5px;
+    min-height: 10vh;
+  }
+}
