@@ -1,0 +1,16 @@
+@mixin button_contac ($color, $bg-color) {
+    padding: 1rem;
+    border-radius: 8px;
+    color: $color;
+    background-color: $bg-color;
+    &:hover {
+        transform: scale( 1.5);
+      }
+}
+.button-whatsapp {
+    @include button-contac (white, green);
+
+}
+.button-phone {
+    @include button_contac (white,red);
+}

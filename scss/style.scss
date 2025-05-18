@@ -1,24 +1,8 @@
 /* Entrega 3 Incluyendo Sass Prueba*/
 /*Importar Variables*/
-.button-whatsapp {
-  padding: 1rem;
-  border-radius: 8px;
-  color: white;
-  background-color: green;
-}
-.button-whatsapp:hover {
-  transform: scale(1.5);
-}
+@import "variables";
+@import "mixin";
 
-.button-phone {
-  padding: 1rem;
-  border-radius: 8px;
-  color: white;
-  background-color: red;
-}
-.button-phone:hover {
-  transform: scale(1.5);
-}
 
 /* Entrega 1 Css */
 * {
@@ -30,23 +14,26 @@
 /*dentro de body)*/
 #body {
   font-family: "Nunito", sans-serif;
-  background-color: gray;
+  background-color: $body_background;
 }
 
 #header {
   display: flex;
   border: 1px solid black;
-  background-color: gray;
+  background-color: $header_background;
 }
-
 /*nesting*/
 .navbar {
   width: 100%;
   border-color: black;
+  a {
+    color: $navbar_color;
+  }
 }
-.navbar a {
-  color: white;
-}
+
+//   .navbar a {
+//      color: $navbar_color;
+//    }
 
 .navbar__ul {
   display: flex;
@@ -71,66 +58,60 @@ img {
 }
 
 h1 {
-  color: red;
-  background-color: gray;
+  color: $h1_color;
+  background-color: $h1_background;
   text-align: center;
   font-size: 32px;
   padding: 1rem;
   margin: 0;
-  transform: skew(-10deg);
+  transform:skew(-10deg);
 }
-
 .h2contacto {
   padding: 1rem;
   text-align: center;
 }
-
 h3 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+
   text-align: center;
 }
-
 /*nesting---transform-transicion*/
-.button__testdrive,
-.button_cuotas {
-  background-color: red;
+.button__testdrive {
+  background-color: $button_testdrive;
   border: 0;
   border-radius: 8px;
   padding: 0.5rem 2rem;
   color: white;
   font-size: 18px;
   transition: all 0.3s ease-in-out;
+  
+  &:hover {
+    color: red;
+    background-color: white;
+    transform: scale(1.1);
+  }
 }
-.button__testdrive:hover,
-.button_cuotas:hover {
-  color: red;
-  background-color: white;
-  transform: scale(1.1);
-}
-
 .button_cuotas {
-  background-color: red;
+    @extend .button__testdrive;
+    background-color: red;
 }
-
 .button__contac--section {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-}
-
+ }
 #footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-content: end;
   align-items: center;
+
   border: 2px solid black;
 }
-
 .img-footer {
   width: 30px;
 }
-
 .fotter-map {
   width: auto;
   height: auto;
@@ -149,10 +130,12 @@ h3 {
   #body {
     min-width: 344px;
   }
+
   .navbar__ul {
     font-size: 14px;
     background-color: rgb(255, 0, 0);
   }
+
   #footer {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3 1fr);
@@ -161,12 +144,14 @@ h3 {
     min-height: 10vh;
   }
 }
+
 /* tablet ////////////////////////////////////*/
 @media screen and (min-width: 577px) {
   .navbar__ul {
     font-size: 18px;
     background-color: rgb(255, 0, 0);
   }
+
   #footer {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(2, 1fr);
@@ -175,12 +160,14 @@ h3 {
     min-height: 10vh;
   }
 }
+
 /* laptop */
 @media screen and (min-width: 992px) {
   .navbar__ul {
     font-size: 22px;
     background-color: rgb(255, 0, 0);
   }
+
   #footer {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr;
@@ -189,5 +176,3 @@ h3 {
     min-height: 10vh;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
