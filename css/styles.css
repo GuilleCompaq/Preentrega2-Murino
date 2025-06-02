@@ -82,6 +82,14 @@
   margin-top: 2rem;
   margin-bottom: 1rem;
 }
+.main__article--page {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+
+}
 .portada__h1--h1portada {
   padding-top: 0.5rem;
   padding-bottom: 1rem;
